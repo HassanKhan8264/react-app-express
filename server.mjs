@@ -9,7 +9,7 @@ app.get('/abc', (req, res) => {
 
 const __dirname = path.resolve()
 
-app.use('/', express.static(path.join(__dirname, '/web/build')))
+app.use('/', express.static(path.join(__dirname, '/react-app/build')))
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
