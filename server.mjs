@@ -3,8 +3,13 @@ import path from 'path'
 const app = express()
 const port = process.env.PORT || 5002
 
-app.get('/abc', (req, res) => {
-  res.send('Hello World!')
+app.get('/weather', (req, res) => {
+  res.send({
+    temp: 72,
+    humidity:45,
+    severTime: new Date().toString()
+  }
+  )
 })
 
 const __dirname = path.resolve()
