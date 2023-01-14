@@ -6,11 +6,11 @@ import cors from 'cors';
 
 
 app.use(cors());
-
-app.get('/weather:cityName', (req, res) => {
-  console.log('cityName', res.params.cityName);
+app.use(express.json());
+app.get('/weather/:cityName', (req, res) => {
+  console.log('cityName', res.param.cityName);
   res.send({
-    city : res.params.cityName,
+    city : res.param.cityName,
     temp: 72,
     humidity:45,
     min:23,
